@@ -1,0 +1,18 @@
+.container-footer {
+  background-color: #6278F7;
+  background-image: url("../../../public/images/background.png");
+  color: #FFFFFF;
+  padding: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social-media ul li {
+  display: inline-block;
+  margin-right: 32px;
+}
+
+.social-media ul li:last-child {
+  margin-right: 0;
+}
