@@ -60,7 +60,10 @@ function App() {
 
   return (
     <div className="App">
-      <Banner />
+      <Banner 
+        imageAddress="/images/banner.png"
+        altText="Banner com o texto: Pessoas e times em um só lugar!"
+      />
       <Form 
         onRegisteredEmployee={employee => onNewEmployeeAdded(employee)}
         teamsName={teams.map(team => team.name)} 
