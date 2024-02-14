@@ -1,7 +1,15 @@
+import { IEmployee } from '../../shared/interfaces/IEmployee';
 import Employee from '../Employee';
 import './Team.css';
 
-const Team = (props) => {
+interface TeamProps {
+  primaryColor: string
+  secondaryColor: string
+  name: string
+  employees: IEmployee[]
+}
+
+const Team = (props: TeamProps) => {
   const cssStyle = { backgroundColor: props.secondaryColor };
 
   return (
