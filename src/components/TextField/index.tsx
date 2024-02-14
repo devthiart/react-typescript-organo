@@ -9,21 +9,21 @@ interface TextFieldProps {
   isRequired: boolean
 }
 
-const TextField = (props: TextFieldProps) => {
-  const modifiedPlaceholder = `${props.placeholder}...`;
+const TextField = ({ onChange, placeholder, label, value, isRequired }: TextFieldProps) => {
+  const modifiedPlaceholder = `${placeholder}...`;
 
   const onTyped = (event: React.ChangeEvent<HTMLInputElement>) => { // https://legacy.reactjs.org/docs/events.html
-    props.onChange(event.target.value);
+    onChange(event.target.value);
   }
 
   return (
     <div className='text-field'>
-      <label>{props.label}</label>
+      <label>{label}</label>
       <input 
-        value={props.value} 
+        value={value} 
         onChange={onTyped} 
         placeholder={modifiedPlaceholder} 
-        required={props.isRequired} 
+        required={isRequired} 
       />
     </div>
   )
