@@ -23,9 +23,7 @@ const Team = (props: TeamProps) => {
           props.employees.map( employee => (
             <Employee 
               key={employee.name}
-              name={employee.name}
-              role={employee.role}
-              imageUrl={employee.imageUrl}
+              employee={employee}
               backgroundColor={props.primaryColor}
             />
           ))

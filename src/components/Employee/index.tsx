@@ -1,21 +1,20 @@
+import { IEmployee } from '../../shared/interfaces/IEmployee';
 import './Employee.css';
 
 interface EmployeeProps {
-  name: string
-  imageUrl: string
-  role: string
+  employee: IEmployee
   backgroundColor: string
 }
 
-const Employee = ({ name, imageUrl, role, backgroundColor }: EmployeeProps) => {
+const Employee = ({ employee, backgroundColor }: EmployeeProps) => {
   return (
     <div className='employee'>
       <div className='header' style={{backgroundColor: backgroundColor}}>
-        <img src={imageUrl} alt={`Foto de ${name}`} />
+        <img src={employee.imageUrl} alt={`Foto de ${employee.name}`} />
       </div>
       <div className='footer'>
-        <h4>{name}</h4>
-        <h5>{role}</h5>
+        <h4>{employee.name}</h4>
+        <h5>{employee.role}</h5>
       </div>
     </div>
   )
