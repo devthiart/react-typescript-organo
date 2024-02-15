@@ -3,15 +3,21 @@ import TextField from '../TextField';
 import DropdownList from '../DropdownList';
 import Button from '../Button';
 import { useState } from 'react';
+import { IEmployee } from '../../shared/interfaces/IEmployee';
 
-const Form = (props) => {
+interface FormProps {
+  onRegisteredEmployee: (employee: IEmployee) => void
+  teamsName: string[]
+}
+
+const Form = (props: FormProps) => {
 
   const [name, setName] = useState('');
   const [role, setRole] = useState('');
   const [imageUrl, setImageUrl] = useState('');
   const [team, setTeam] = useState(props.teamsName[0]);
 
-  const submitForm = (event) => {
+  const submitForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     props.onRegisteredEmployee({
       name, 
@@ -31,7 +37,7 @@ const Form = (props) => {
 
   return (
     <section className="container-form">
-      <form onSubmit={submitForm}>
+      <form onSubmit={event => submitForm(event)}>
         <h2>Preencha os dados para criar o card do colaborador</h2>
         <TextField 
           label="Nome" 
