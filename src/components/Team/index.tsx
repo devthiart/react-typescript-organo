@@ -30,7 +30,7 @@ const Team = (props: TeamProps) => {
         }
       </div>
     </section>
-    // : '' // Conditional (ternary) operator
+    // : <></> // Conditional (ternary) operator
   )
 }
 

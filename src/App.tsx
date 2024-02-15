@@ -3,6 +3,7 @@ import Banner from './components/Banner';
 import Form from './components/Form';
 import Team from './components/Team';
 import Footer from './components/Footer';
+import { IEmployee } from './shared/interfaces/IEmployee';
 
 function App() {
 
@@ -51,9 +52,9 @@ function App() {
     }
   ]
 
-  const [employees, setEmployees] = useState([]);
+  const [employees, setEmployees] = useState<IEmployee[]>([]);
 
-  const onNewEmployeeAdded = (employee) => {
+  const onNewEmployeeAdded = (employee: IEmployee) => {
     // debugger // Stop execution in the Google Chrome.
     setEmployees([...employees, employee]);
   }
