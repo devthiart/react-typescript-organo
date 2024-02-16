@@ -15,6 +15,7 @@ const Employee = ({ employee, backgroundColor }: EmployeeProps) => {
       <div className='footer'>
         <h4>{employee.name}</h4>
         <h5>{employee.role}</h5>
+        <h6>{ new Date(employee.date).toLocaleDateString() }</h6>
       </div>
     </div>
   )

@@ -16,6 +16,7 @@ const Form = (props: FormProps) => {
   const [role, setRole] = useState('');
   const [imageUrl, setImageUrl] = useState('');
   const [team, setTeam] = useState(props.teamsName[0]);
+  const [date, setDate] = useState('');
 
   const submitForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -23,7 +24,8 @@ const Form = (props: FormProps) => {
       name, 
       role, 
       imageUrl, 
-      team
+      team,
+      date
     });
     clearForm();
   }
@@ -32,6 +34,7 @@ const Form = (props: FormProps) => {
     setName('');
     setImageUrl('');
     setRole('');
+    setDate('');
     setTeam('');
   }
 
@@ -58,6 +61,14 @@ const Form = (props: FormProps) => {
           placeholder="Digite o endereço da imagem" 
           value={imageUrl}
           onChange={value => setImageUrl(value)}
+        />
+        <TextField 
+          type="date"
+          label="Data de Entrada"
+          placeholder="Digite a data"
+          value={date}
+          onChange={value => setDate(value)}
+          isRequired
         />
         <DropdownList 
           label="Time" 

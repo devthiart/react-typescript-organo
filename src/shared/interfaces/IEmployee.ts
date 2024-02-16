@@ -3,4 +3,5 @@ export interface IEmployee {
   role: string
   imageUrl: string
   team?: string
+  date: string
 }
