@@ -1,7 +1,5 @@
 import './Banner.css';
 
-import React from 'react';
-
 interface BannerProps {
   imageAddress: string
   altText?: string
