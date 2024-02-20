@@ -13,10 +13,10 @@ const Team = (props: TeamProps) => {
   const cssStyle = { backgroundColor: props.secondaryColor };
 
   return (
-    // If props.employees.length > 0 then return section tag.
-    // (props.employees.length > 0) ? <section className="team" style={ cssStyle }> // Conditional (ternary) operator
     // Other way:
-    (props.employees.length > 0) && <section className="team" style={ cssStyle }>
+    // (props.employees.length > 0) && <section className="team" style={ cssStyle }>
+    // If props.employees.length > 0 then return section tag.
+    (props.employees.length > 0) ? <section className="team" style={ cssStyle }> { /* Conditional (ternary) operator */ }
       <h3 style={{ borderColor: props.primaryColor }}>{props.name}</h3>
       <div className="employees">
         {
@@ -30,7 +30,7 @@ const Team = (props: TeamProps) => {
         }
       </div>
     </section>
-    // : <></> // Conditional (ternary) operator
+    : <></> // Conditional (ternary) operator
   )
 }
 
