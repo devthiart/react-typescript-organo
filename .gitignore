@@ -5,6 +5,11 @@
 /.pnp
 .pnp.js
 
+# old depencencies
+/old_node_modules
+old_package-lock.json
+old_package.json
+
 # testing
 /coverage
 
